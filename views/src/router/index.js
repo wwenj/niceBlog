@@ -8,19 +8,21 @@ Vue.use(Router)
 const routes = [
   { path: '/404', component: () => import('components/routerError/404') },
   { path: '/401', component: () => import('components/routerError/401') },
-  { path: '*', redirect: '/404' },
+  { path: '/maintain', component: () => import('components/maintain/index') },
+  // { path: '*', redirect: '/404' },
   {
     path: '/',
-    redirect: '/test'
+    redirect: '/maintain'
   },
-  {
-    path: '/',
-    name: 'Layout',
-    component: () => import('components/layout/main.vue'),
-    children: [
-      ...Test
-    ]
-  }
+  ...Test
+  // {
+  //   path: '/',
+  //   name: 'Layout',
+  //   component: () => import('components/layout/main.vue'),
+  //   children: [
+  //     ...Test
+  //   ]
+  // }
 ]
 
 /** 分模块的路由，合并传入Router */

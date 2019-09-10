@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    test
-    <svg-icon icon-class="a"/>
+    欢迎访问niceBlog
   </div>
 </template>
 
@@ -38,3 +37,6 @@
 //   }
 // }
 </script>
+<style lang="scss" scope>
+
+</style>
