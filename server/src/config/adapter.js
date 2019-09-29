@@ -4,6 +4,7 @@ const fileSession = require('think-session-file');
 const mysql = require('think-model-mysql');
 const {Console, File, DateFile} = require('think-logger3');
 const path = require('path');
+const account = require('../../account');
 const isDev = think.env === 'development';
 
 /**
@@ -36,14 +37,17 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: 'my_blog',
+    // database: '',
     prefix: '',
     encoding: 'utf8',
-    host: '127.0.0.1',
-    port: '3306',
-    user: 'root',
-    password: '8151186051',
-    dateStrings: true
+    // host: '',
+    // port: '',
+    // user: '',
+    // password: '',
+    dateStrings: true,
+    pageSize: 20, // 设置默认每页为 20 条
+    acquireWaitTimeout: 100000, // 等待连接的超时时间，避免获取不到连接一直卡在那里，开发环境下有用s
+    ...account.mysql
   }
 };
 

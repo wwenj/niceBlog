@@ -1,7 +1,6 @@
 <template>
   <div class="weihu">
     <img class="img1" src="../../assets/img/common/weihu.jpg" alt />
-    <!-- <img class="img2" src="../../assets/img/common/weihu2.png" alt /> -->
   </div>
 </template>
 <style lang="scss" scoped>

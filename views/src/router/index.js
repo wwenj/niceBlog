@@ -12,7 +12,7 @@ const routes = [
   // { path: '*', redirect: '/404' },
   {
     path: '/',
-    redirect: '/maintain'
+    redirect: '/test'
   },
   ...Test
   // {

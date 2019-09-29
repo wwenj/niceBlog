@@ -1,4 +1,4 @@
-const Base = require('./base.js');
+const Base = require('../base.js');
 
 module.exports = class extends Base {
   indexAction() {
@@ -23,6 +23,10 @@ module.exports = class extends Base {
     this.body = `<pre>index1</pre>`;
   }
 };
+/**
+ *
+ *
+ */
 // const a = {
 //   errno: 0,
 //   message: 'succe',

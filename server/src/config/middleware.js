@@ -1,6 +1,6 @@
 const path = require('path');
 const isDev = think.env === 'development';
-
+const qs = require('think-qs');
 module.exports = [
   {
     handle: 'meta',
@@ -34,6 +34,13 @@ module.exports = [
   {
     handle: 'router',
     options: {}
+  },
+  {
+    handle: qs,
+    options: {
+      query: true,
+      post: true
+    }
   },
   'logic',
   'controller'
