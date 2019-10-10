@@ -59,14 +59,18 @@ exports.session = {
   type: 'file',
   common: {
     cookie: {
-      name: 'thinkjs'
-      // keys: ['werwer', 'werwer'],
-      // signed: true
+      name: 'thinkjs',
+      maxAge: 10 * 3600 * 1000 // 10个小时
+      // expires: '',
+      // secure: false,
+      // keys: [],
     }
   },
   file: {
     handle: fileSession,
-    sessionPath: path.join(think.ROOT_PATH, 'runtime/session')
+    sessionPath: path.join(think.ROOT_PATH, 'runtime/session'),
+    maxAge: '1d', // session timeout, default is 1 day
+    autoUpdate: false // update expires time when get session, default is false
   }
 };
 

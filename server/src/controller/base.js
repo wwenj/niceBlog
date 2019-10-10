@@ -6,7 +6,7 @@ module.exports = class extends think.Controller {
     if (this.ctx.method === 'GET') {
       this.ctx.data = this.ctx.query;
     } else {
-      this.ctx.data = this.ctx.request.body.post;
+      this.ctx.data = this.ctx.post();
     }
   }
   __call() {
