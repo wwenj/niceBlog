@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <input class="upload" type="file" id="file" accept="image/*" multiple @change="upLoad(this)" />
-    <el-upload
+    <!-- <el-upload
       action="https://jsonplaceholder.typicode.com/posts/"
       list-type="picture-card"
       :on-preview="handlePictureCardPreview"
@@ -11,7 +11,7 @@
     </el-upload>
     <el-dialog :visible.sync="dialogVisible">
       <img width="100%" :src="dialogImageUrl" alt />
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 <script>

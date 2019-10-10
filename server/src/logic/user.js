@@ -1,13 +1,13 @@
 module.exports = class extends think.Logic {
   loginAction() {
-    this.allowMethods = 'get'; //  只允许 POST 请求类型
+    this.allowMethods = 'post'; //  只允许 POST 请求类型
     this.rules = {
-      userName: {
+      username: {
         int: true,
         required: true,
         default: ''
       },
-      passWord: {
+      password: {
         string: true,
         required: true,
         default: ''

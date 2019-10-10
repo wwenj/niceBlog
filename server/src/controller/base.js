@@ -1,6 +1,16 @@
 module.exports = class extends think.Controller {
-  __before() {
+  async __before() {
     console.log(`>请求进入=================>${this.ctx.path}`);
+    console.log(this.cookie('userToken'))
+    console.log(await this.session())
+    if (this.ctx.path !== '/user/login') {
+      let sessionToken = Object.keys(await this.session())
+      if (sessionToken.indexOf(this.cookie('userToken')) === -1) {
+        console.log('当前未登录')
+        this.ctx.fail(1003, '登录信息不存在', {});
+        return false
+      }
+    }
     // 各个请求带来参数放到data中
     this.ctx.data = null;
     if (this.ctx.method === 'GET') {
