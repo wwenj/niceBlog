@@ -5,7 +5,7 @@ module.exports = class extends Base {
     let res;
     try {
       const blogArticle = this.model('blog_article');
-      const params = ['user_id', 'title','content', 'class', 'tab'];
+      const params = ['user_id', 'title', 'content', 'class', 'tab'];
       const data = this.post(params.join(','));
       data.tab = data.tab.join(',');
       blogArticle.add(data);
@@ -16,5 +16,5 @@ module.exports = class extends Base {
     }
 
     this.success(res);
-  }
+  };
 };

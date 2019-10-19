@@ -1,6 +1,9 @@
 // default config
 module.exports = {
+  port: 80, // 将监听的端口修改为 1234
+  // port: 8360x, // 将监听的端口修改为 1234
   workers: 1,
+  url_route_on: true,
   cookie: {
     domain: '',
     path: '/',
